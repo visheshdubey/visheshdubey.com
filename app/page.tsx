@@ -1,113 +1,234 @@
-import Image from 'next/image'
+import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Github, Mail, Twitter, Linkedin } from "lucide-react";
+import { Button, buttonVariants } from "@/components/ui/button";
+import WorkCards from "@/components/cards/WorkCards";
+import { work } from "@/data/work";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { skills } from "@/data/skills";
+import { Input } from "@/components/ui/input";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <main className="flex min-h-screen h-fit max-w-5xl mx-auto flex-col items-center gap-28 p-8">
+      <section className="flex w-full justify-center flex-col gap-8 mt-16">
+        <div className="flex gap-8 ">
+          <Avatar className="z-0 w-32 aspect-square h-fit">
+            <AvatarImage
+              className="dark:grayscale"
+              src="https://avatars.githubusercontent.com/u/19987590?v=4"
             />
+            <AvatarFallback>VD.</AvatarFallback>
+          </Avatar>
+
+          <div className="flex flex-col gap-2 justify-center">
+            <span className="text-3xl font-medium">visheshdubey.</span>
+            <span className="text-muted-foreground">Full-Stack Engineer</span>
+          </div>
+        </div>
+        <span className="text-lg">
+          {`It is a long established fact that a reader will be distracted by the
+        readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a more-or-less normal distribution of
+        letters, as opposed to using 'Content here, content here', making it
+        look like readable English.`}
+        </span>
+        <div className="flex gap-4">
+          <a
+            href="http://#"
+            className={buttonVariants({
+              variant: "ghost",
+              size: "icon",
+            })}
+          >
+            <Github className={` w-5 stroke-muted-foreground`} />
+          </a>
+          <a
+            href="http://#"
+            className={buttonVariants({
+              variant: "ghost",
+              size: "icon",
+            })}
+          >
+            <Linkedin className="w-5 stroke-muted-foreground" />
+          </a>
+          <a
+            href="http://#"
+            className={buttonVariants({
+              variant: "ghost",
+              size: "icon",
+            })}
+          >
+            <Twitter className="w-5 stroke-muted-foreground" />
+          </a>
+          <a
+            href="http://#"
+            className={buttonVariants({
+              variant: "ghost",
+              size: "icon",
+            })}
+          >
+            <Mail className="w-5 stroke-muted-foreground" />
           </a>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+      </section>
+      <section className="flex w-full  justify-center flex-col gap-8 mt-8">
+        <h2 className="text-3xl font-medium">WORK</h2>
+        <div className="flex justify-between gap-8">
+          {work.map((w) => (
+            <WorkCards
+              key={w.id}
+              className="w-full p-0"
+              workData={w}
+            ></WorkCards>
+          ))}
+        </div>
+      </section>
+      <section className="flex w-full  justify-center flex-col gap-8 mt-8">
+        <h2 className="text-3xl font-medium">SKILLS</h2>
+        <div className="flex flex-col gap-4">
+          <h3 className="font-medium text-muted-foreground text-sm">
+            LANGUAGES
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {skills.languages.map((sl) => (
+              <TooltipProvider key={sl.id + "sl"}>
+                <Tooltip>
+                  <TooltipTrigger
+                    className={`${buttonVariants({
+                      variant: "outline",
+                    })}`}
+                  >
+                    {sl.name}
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{sl.description}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col gap-4">
+          <h3 className="font-medium text-muted-foreground text-sm">
+            FRAMEWORKS
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {skills.Frameworks.map((sl) => (
+              <TooltipProvider key={sl.id + "sl"}>
+                <Tooltip>
+                  <TooltipTrigger
+                    className={`${buttonVariants({
+                      variant: "outline",
+                    })}`}
+                  >
+                    {sl.name}
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{sl.description}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col gap-4">
+          <h3 className="font-medium text-muted-foreground text-sm">TOOLS</h3>
+          <div className="flex flex-wrap gap-2">
+            {skills.Tools.map((sl) => (
+              <TooltipProvider key={sl.id + "sl"}>
+                <Tooltip>
+                  <TooltipTrigger
+                    className={`${buttonVariants({
+                      variant: "outline",
+                    })}`}
+                  >
+                    {sl.name}
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{sl.description}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="flex w-full  justify-center flex-col gap-8 mt-8">
+        <h2 className="text-3xl font-medium">EXPERIENCE</h2>
+        <div
+          className={`flex flex-col gap-8 rounded-xl border bg-card text-card-foreground p-8`}
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+          <div className="flex w-full gap-8 items-center ">
+            <Avatar className="z-0 w-16 aspect-square h-fit">
+              <AvatarImage
+                className="dark:grayscale"
+                src="https://avatars.githubusercontent.com/u/19987590?v=4"
+              />
+              <AvatarFallback>VD.</AvatarFallback>
+            </Avatar>
+            <div className="flex w-full justify-between">
+              <div className="flex flex-col gap-2 justify-center ">
+                <span className="text-xl font-medium">Software Engineer</span>
+                <span className="text-muted-foreground">Accenture</span>
+              </div>
+              <span className="text-muted-foreground italic">
+                Feb 2022 - present
+              </span>
+            </div>
+          </div>
+          <span className="">
+            {`It is a long established fact that a reader will be distracted by the
+        readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a more-or-less normal distribution of
+        letters, as opposed to using 'Content here, content here', making it
+        look like readable English.`}
+          </span>
+        </div>
+        <div
+          className={`flex flex-col gap-8 rounded-xl border bg-card text-card-foreground p-8`}
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          <div className="flex w-full gap-8 items-center ">
+            <Avatar className="z-0 w-16 aspect-square h-fit">
+              <AvatarImage
+                className="dark:grayscale"
+                src="https://avatars.githubusercontent.com/u/19987590?v=4"
+              />
+              <AvatarFallback>VD.</AvatarFallback>
+            </Avatar>
+            <div className="flex w-full justify-between">
+              <div className="flex flex-col gap-2 justify-center ">
+                <span className="text-xl font-medium">FullStack Engineer</span>
+                <span className="text-muted-foreground">Campusmonk</span>
+              </div>
+              <span className="text-muted-foreground italic">
+                June 2021 - Feb 2022
+              </span>
+            </div>
+          </div>
+          <span className="">
+            {`It is a long established fact that a reader will be distracted by the
+        readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a more-or-less normal distribution of
+        letters, as opposed to using 'Content here, content here', making it
+        look like readable English.`}
+          </span>
+        </div>
+      </section>
+      <section className="flex w-full  justify-center items-center flex-col gap-16 mt-16 pb-32">
+        <h3 className="text-4xl font-medium">
+          {`Got an Idea? Let's Make Magic Happen, Together!`}
+        </h3>
+        <div className="flex w-full items-center flex-wrap justify-center gap-4">
+          <Input className="max-w-2xl h-16 rounded-full" />
+          <Button className="h-16 rounded-full w-36 text-lg ">Submit</Button>
+        </div>
+      </section>
     </main>
-  )
+  );
 }
