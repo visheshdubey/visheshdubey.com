@@ -20,11 +20,10 @@ export const work: Work[] = [
   },
   {
     id: 2,
-    title: "OpenHiring.ai",
-    description:
-      "AI powered job search platfom, folks can find thier dream job.",
-    footerText: "openhiring.ai",
-    url: "https://openhiring.vercel.app",
+    title: "Ohhhhhhhhhhhhhhhhhhh",
+    description: "Ohhhhhh",
+    footerText: "oh",
+    url: "oh",
     tw_color: "purple",
     tw_color_weight: "600",
   },
