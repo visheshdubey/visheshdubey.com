@@ -30,7 +30,10 @@ const WorkCards = ({
         </CardDescription>
       </CardContent>
       <CardFooter className="p-4 bg-none backdrop-blur-2xl">
-        <a href={workData.url} className="flex gap-2">
+        <a
+          href={workData.url}
+          className="flex gap-2 hover:gap-3 transition-all ease-in-out"
+        >
           {workData.footerText}
           <ExternalLink className="w-4" />
         </a>
