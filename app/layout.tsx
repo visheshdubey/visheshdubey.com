@@ -7,18 +7,6 @@ import { Copyright } from "lucide-react";
 import { Github, Mail, Twitter, Linkedin } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import Script from "next/script";
-import { Separator } from "@/components/ui/separator";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
-import Link from "next/link";
-import { ThemeToggle } from "@/components/theme/theme-toggle";
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -37,13 +25,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className}   overflow-x-hidden`}>
+      <body
+        data-spy="scroll"
+        data-target="#navbar"
+        data-offset="100"
+        className={`${poppins.className} relative transition-all ease-in-out duration-300`}
+      >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <div className="relative">
-            <div className="sticky -z-40 top-0">
-              <div className="-top-16 md:-top-32 right-16 md:right-32 absolute h-48 w-1/2 blur-[80px] rounded-full bg-fuchsia-500"></div>
-              <div className="-top-16 md:-top-32 left-16 md:left-32 absolute h-48 w-1/2 blur-[80px] rounded-full bg-blue-500"></div>
-            </div>
+          <div className="sticky -z-10 top-0">
+            <div className="-top-16 md:-top-32 right-16 md:right-32 absolute h-48 w-1/2 blur-[80px] rounded-full bg-fuchsia-500"></div>
+            <div className="-top-16 md:-top-32 left-16 md:left-32 absolute h-48 w-1/2 blur-[80px] rounded-full bg-blue-500"></div>
           </div>
           <HomeHeader></HomeHeader>
           {children}
