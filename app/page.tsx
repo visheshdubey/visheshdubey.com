@@ -17,28 +17,33 @@ import ShootingStars from "@/components/animated-components/ShootingStars";
 export default function Home() {
   return (
     <main
-      className="flex min-h-screen h-fit max-w-5xl mx-auto flex-col items-center gap-8 p-8"
+      className="flex relative min-h-screen h-fit max-w-5xl mx-auto flex-col items-center gap-8 p-8"
       id="home"
     >
-      <div className="relative overflow-hidden -z-20">
+      <div className="absolute max-w-5xl w-screen h-[90vh] -z-20 overflow-hidden">
         <ShootingStars
-          initial={{ rotate: -45, x: -180, y: 0, opacity: 1 }}
-          animate={{ rotate: -45, x: -90, y: 90, opacity: 0 }}
+          initial={{ rotate: -45, x: 10, y: 10, opacity: 1 }}
+          animate={{ rotate: -45, x: 100, y: 100, opacity: 0 }}
+          repeatDelay={2}
+        ></ShootingStars>
+        <ShootingStars
+          initial={{ rotate: -45, x: 180, y: 50, opacity: 1 }}
+          animate={{ rotate: -45, x: 270, y: 140, opacity: 0 }}
           repeatDelay={4}
         ></ShootingStars>
         <ShootingStars
-          initial={{ rotate: -45, x: 0, y: 0, opacity: 1 }}
-          animate={{ rotate: -45, x: 90, y: 90, opacity: 0 }}
-          repeatDelay={10}
+          initial={{ rotate: -45, x: 360, y: 30, opacity: 1 }}
+          animate={{ rotate: -45, x: 450, y: 120, opacity: 0 }}
+          repeatDelay={5}
         ></ShootingStars>
         <ShootingStars
-          initial={{ rotate: -45, x: 90, y: 180, opacity: 1 }}
-          animate={{ rotate: -45, x: 180, y: 270, opacity: 0 }}
+          initial={{ rotate: -45, x: 560, y: 10, opacity: 1 }}
+          animate={{ rotate: -45, x: 650, y: 100, opacity: 0 }}
           repeatDelay={6}
         ></ShootingStars>
         <ShootingStars
-          initial={{ rotate: -45, x: -270, y: 45, opacity: 1 }}
-          animate={{ rotate: -45, x: -180, y: 135, opacity: 0 }}
+          initial={{ rotate: -45, x: 270, y: 240, opacity: 1 }}
+          animate={{ rotate: -45, x: 360, y: 330, opacity: 0 }}
           repeatDelay={8}
         ></ShootingStars>
       </div>
