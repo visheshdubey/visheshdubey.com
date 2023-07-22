@@ -64,11 +64,10 @@ export default function Home() {
           </div>
         </div>
         <span className="text-lg">
-          {`It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using 'Content here, content here', making it
-        look like readable English.`}
+          {/* {`🌟 I'm a full-stack developer, and I absolutely love bringing apps and webapps to life! 
+          From the pretty pixels on the front-end to the sneaky codes on the back-end,
+           I dive into every detail with excitement. `} */}
+          {`👋 I'm a passionate full-stack developer on a mission to craft exceptional web experiences. From front-end finesse to back-end wizardry, I love transforming ideas into captivating digital realities. Collaborating with clients and teams is the heartbeat of my process, driving success in every project. Let's connect and explore opportunities to create something extraordinary together! `}
         </span>
         <div className="flex gap-4">
           <a
@@ -109,7 +108,10 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section className="flex w-full justify-center flex-col gap-8 pt-28">
+      <section
+        id="work"
+        className="flex w-full justify-center flex-col gap-8 pt-28"
+      >
         <h2 className="text-3xl font-medium">WORK</h2>
         <div className="flex flex-wrap md:flex-nowrap justify-between gap-8">
           {work.map((w) => (
@@ -121,7 +123,10 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="flex w-full  justify-center flex-col gap-8 pt-28">
+      <section
+        id="skills"
+        className="flex w-full  justify-center flex-col gap-8 pt-28"
+      >
         <h2 className="text-3xl font-medium">SKILLS</h2>
         <div className="flex flex-col gap-4">
           <h3 className="font-medium text-muted-foreground text-sm">
