@@ -28,7 +28,7 @@ const ShootingStars = ({
         repeat: Infinity,
         repeatDelay,
       }}
-      className="absolute -z-[1] w-[2px] h-36 bg-gradient-to-t  from-purple-500 to-purple-500/0 dark:from-white dark:to-white/0 rotate-90"
+      className="absolute  w-[2px] h-36 bg-gradient-to-t  from-purple-500 to-purple-500/0 dark:from-white dark:to-white/0 rotate-90"
     ></motion.div>
   );
 };

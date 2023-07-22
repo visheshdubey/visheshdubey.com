@@ -17,48 +17,35 @@ import ShootingStars from "@/components/animated-components/ShootingStars";
 export default function Home() {
   return (
     <main
-      className="flex relative min-h-screen h-fit max-w-5xl mx-auto flex-col items-center gap-8 p-8"
+      className="flex min-h-screen h-fit max-w-5xl mx-auto flex-col items-center gap-8 p-8"
       id="home"
     >
-      <ShootingStars
-        initial={{ rotate: -45, x: -180, y: 0, opacity: 1 }}
-        animate={{ rotate: -45, x: -90, y: 90, opacity: 0 }}
-        repeatDelay={4}
-      ></ShootingStars>
-      <ShootingStars
-        initial={{ rotate: -45, x: 0, y: 0, opacity: 1 }}
-        animate={{ rotate: -45, x: 90, y: 90, opacity: 0 }}
-        repeatDelay={10}
-      ></ShootingStars>
-      <ShootingStars
-        initial={{ rotate: -45, x: 90, y: 180, opacity: 1 }}
-        animate={{ rotate: -45, x: 180, y: 270, opacity: 0 }}
-        repeatDelay={6}
-      ></ShootingStars>
-      <ShootingStars
-        initial={{ rotate: -45, x: -270, y: 45, opacity: 1 }}
-        animate={{ rotate: -45, x: -180, y: 135, opacity: 0 }}
-        repeatDelay={8}
-      ></ShootingStars>
-      {/* <ShootingStars
-        initial={{ rotate: -45, x: -150, y: 50, opacity: 1 }}
-        animate={{ rotate: -45, x: -70, y: 130, opacity: 0 }}
-      ></ShootingStars>
-      <ShootingStars
-        initial={{ rotate: -45, x: -90, y: -180, opacity: 1 }}
-        animate={{ rotate: -45, x: -170, y: -340, opacity: 0 }}
-      ></ShootingStars>
-      <ShootingStars
-        initial={{ rotate: -45, x: -150, y: 50, opacity: 1 }}
-        animate={{ rotate: -45, x: -70, y: 130, opacity: 0 }}
-      ></ShootingStars> */}
+      <div className="relative overflow-hidden -z-20">
+        <ShootingStars
+          initial={{ rotate: -45, x: -180, y: 0, opacity: 1 }}
+          animate={{ rotate: -45, x: -90, y: 90, opacity: 0 }}
+          repeatDelay={4}
+        ></ShootingStars>
+        <ShootingStars
+          initial={{ rotate: -45, x: 0, y: 0, opacity: 1 }}
+          animate={{ rotate: -45, x: 90, y: 90, opacity: 0 }}
+          repeatDelay={10}
+        ></ShootingStars>
+        <ShootingStars
+          initial={{ rotate: -45, x: 90, y: 180, opacity: 1 }}
+          animate={{ rotate: -45, x: 180, y: 270, opacity: 0 }}
+          repeatDelay={6}
+        ></ShootingStars>
+        <ShootingStars
+          initial={{ rotate: -45, x: -270, y: 45, opacity: 1 }}
+          animate={{ rotate: -45, x: -180, y: 135, opacity: 0 }}
+          repeatDelay={8}
+        ></ShootingStars>
+      </div>
 
-      <section
-        className="flex w-full justify-center flex-col gap-8 pt-4 md:pt-28"
-        data-scrollspy
-      >
+      <section className="flex w-full justify-center flex-col gap-8 pt-4 md:pt-28">
         <div className="flex gap-8 flex-wrap">
-          <Avatar className="z-0 w-32 aspect-square h-fit">
+          <Avatar className="z-10 w-32 aspect-square h-fit">
             <AvatarImage
               className="dark:grayscale transition-all ease-in-out duration-500"
               src="https://avatars.githubusercontent.com/u/19987590?v=4"
@@ -129,10 +116,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section
-        className="flex w-full  justify-center flex-col gap-8 pt-28"
-        data-scrollspy
-      >
+      <section className="flex w-full  justify-center flex-col gap-8 pt-28">
         <h2 className="text-3xl font-medium">SKILLS</h2>
         <div className="flex flex-col gap-4">
           <h3 className="font-medium text-muted-foreground text-sm">
@@ -205,14 +189,13 @@ export default function Home() {
       <section
         id="experience"
         className="flex w-full  justify-center flex-col gap-8 pt-28"
-        data-scrollspy
       >
         <h2 className="text-3xl font-medium">EXPERIENCE</h2>
         <div
           className={`flex flex-col gap-8 rounded-xl border bg-card text-card-foreground p-8`}
         >
           <div className="flex flex-wrap w-full gap-8 items-center ">
-            <Avatar className="z-0 w-16 aspect-square h-fit">
+            <Avatar className="z-10 w-16 aspect-square h-fit">
               <AvatarImage
                 className="dark:grayscale"
                 src="https://avatars.githubusercontent.com/u/19987590?v=4"
@@ -241,7 +224,7 @@ export default function Home() {
           className={`flex flex-col gap-8 rounded-xl border bg-card text-card-foreground p-8`}
         >
           <div className="flex flex-wrap w-full gap-8 items-center ">
-            <Avatar className="z-0 w-16 aspect-square h-fit">
+            <Avatar className="z-10 w-16 aspect-square h-fit">
               <AvatarImage
                 className="dark:grayscale"
                 src="https://avatars.githubusercontent.com/u/19987590?v=4"
@@ -267,10 +250,7 @@ export default function Home() {
           </span>
         </div>
       </section>
-      <section
-        className="flex w-full  justify-center items-center flex-col gap-8 md:gap-16  py-36"
-        data-scrollspy
-      >
+      <section className="flex w-full  justify-center items-center flex-col gap-8 md:gap-16  py-36">
         <h3 className="text-3xl md:text-5xl text-center leading-relaxed font-medium">
           {`Got an Idea? Let's Make Magic Happen, Together!`}
         </h3>
