@@ -15,12 +15,18 @@ import { Input } from "@/components/ui/input";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen h-fit max-w-5xl mx-auto flex-col items-center gap-28 p-8">
-      <section className="flex w-full justify-center flex-col gap-8 mt-16">
-        <div className="flex gap-8 ">
+    <main
+      className="flex min-h-screen h-fit max-w-5xl mx-auto flex-col items-center gap-8 p-8"
+      id="home"
+    >
+      <section
+        className="flex w-full justify-center flex-col gap-8 pt-4 md:pt-28"
+        data-scrollspy
+      >
+        <div className="flex gap-8 flex-wrap">
           <Avatar className="z-0 w-32 aspect-square h-fit">
             <AvatarImage
-              className="dark:grayscale"
+              className="dark:grayscale transition-all ease-in-out duration-500"
               src="https://avatars.githubusercontent.com/u/19987590?v=4"
             />
             <AvatarFallback>VD.</AvatarFallback>
@@ -77,9 +83,9 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section className="flex w-full  justify-center flex-col gap-8 mt-8">
+      <section className="flex w-full justify-center flex-col gap-8 pt-28">
         <h2 className="text-3xl font-medium">WORK</h2>
-        <div className="flex justify-between gap-8">
+        <div className="flex flex-wrap md:flex-nowrap justify-between gap-8">
           {work.map((w) => (
             <WorkCards
               key={w.id}
@@ -89,7 +95,10 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="flex w-full  justify-center flex-col gap-8 mt-8">
+      <section
+        className="flex w-full  justify-center flex-col gap-8 pt-28"
+        data-scrollspy
+      >
         <h2 className="text-3xl font-medium">SKILLS</h2>
         <div className="flex flex-col gap-4">
           <h3 className="font-medium text-muted-foreground text-sm">
@@ -159,12 +168,16 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex w-full  justify-center flex-col gap-8 mt-8">
+      <section
+        id="experience"
+        className="flex w-full  justify-center flex-col gap-8 pt-28"
+        data-scrollspy
+      >
         <h2 className="text-3xl font-medium">EXPERIENCE</h2>
         <div
           className={`flex flex-col gap-8 rounded-xl border bg-card text-card-foreground p-8`}
         >
-          <div className="flex w-full gap-8 items-center ">
+          <div className="flex flex-wrap w-full gap-8 items-center ">
             <Avatar className="z-0 w-16 aspect-square h-fit">
               <AvatarImage
                 className="dark:grayscale"
@@ -172,7 +185,7 @@ export default function Home() {
               />
               <AvatarFallback>VD.</AvatarFallback>
             </Avatar>
-            <div className="flex w-full justify-between">
+            <div className="flex flex-wrap w-full justify-between">
               <div className="flex flex-col gap-2 justify-center ">
                 <span className="text-xl font-medium">Software Engineer</span>
                 <span className="text-muted-foreground">Accenture</span>
@@ -193,7 +206,7 @@ export default function Home() {
         <div
           className={`flex flex-col gap-8 rounded-xl border bg-card text-card-foreground p-8`}
         >
-          <div className="flex w-full gap-8 items-center ">
+          <div className="flex flex-wrap w-full gap-8 items-center ">
             <Avatar className="z-0 w-16 aspect-square h-fit">
               <AvatarImage
                 className="dark:grayscale"
@@ -201,7 +214,7 @@ export default function Home() {
               />
               <AvatarFallback>VD.</AvatarFallback>
             </Avatar>
-            <div className="flex w-full justify-between">
+            <div className="flex flex-wrap w-full justify-between">
               <div className="flex flex-col gap-2 justify-center ">
                 <span className="text-xl font-medium">FullStack Engineer</span>
                 <span className="text-muted-foreground">Campusmonk</span>
@@ -220,12 +233,19 @@ export default function Home() {
           </span>
         </div>
       </section>
-      <section className="flex w-full  justify-center items-center flex-col gap-16 mt-16 pb-32">
-        <h3 className="text-4xl font-medium">
+      <section
+        className="flex w-full  justify-center items-center flex-col gap-8 md:gap-16  py-36"
+        data-scrollspy
+      >
+        <h3 className="text-3xl md:text-5xl text-center leading-relaxed font-medium">
           {`Got an Idea? Let's Make Magic Happen, Together!`}
         </h3>
         <div className="flex w-full items-center flex-wrap justify-center gap-4">
-          <Input className="max-w-2xl h-16 rounded-full" />
+          <Input
+            className="max-w-2xl px-8 h-16 rounded-full"
+            type="email"
+            placeholder="johndoe@example.com"
+          />
           <Button className="h-16 rounded-full w-36 text-lg ">Submit</Button>
         </div>
       </section>
