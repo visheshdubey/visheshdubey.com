@@ -14,22 +14,13 @@ export default function Home() {
   return (
     <main className="flex relative min-h-screen h-fit max-w-5xl mx-auto flex-col items-center gap-8 p-8" id="home">
       <ShootingStarContainer />
-
       <AnimateDiv>
         <HeroSection profileData={profileData} />
       </AnimateDiv>
-      {/* <AnimateDiv> */}
       <WorkSection workData={workData} />
-      {/* </AnimateDiv> */}
-      {/* <AnimateDiv> */}
       <SkillSection skills={skillData} />
-      {/* </AnimateDiv> */}
-      {/* <AnimateDiv> */}
       <ExperienceSection experiences={experienceData} />
-      {/* </AnimateDiv> */}
-      {/* <AnimateDiv> */}
       <EmailCTASection />
-      {/* </AnimateDiv> */}
     </main>
   );
 }
