@@ -1,4 +1,4 @@
-import ShootingStars from "@/app/_comps/ui/ShootingStars";
+import ShootingStars from "@/app/_comps/animation/ShootingStars";
 import { shootingStar } from "@/data/shooting-star";
 import React from "react";
 
