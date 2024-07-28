@@ -9,15 +9,7 @@ type props = {
   opacity: number;
 };
 
-const ShootingStars = ({
-  initial,
-  animate,
-  repeatDelay,
-}: {
-  initial: props;
-  animate: props;
-  repeatDelay: number;
-}) => {
+const ShootingStars = ({ initial, animate, repeatDelay }: { initial: props; animate: props; repeatDelay: number }) => {
   return (
     <motion.div
       initial={initial}

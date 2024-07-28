@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { ThemeToggle } from "../theme/theme-toggle";
-import { Separator } from "../ui/separator";
+import { ThemeToggle } from "@/components/theme/theme-toggle";
+import { Separator } from "@/components/ui/separator";
 import {
   Sheet,
   SheetClose,
@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import Link from "next/link";
-import { buttonVariants } from "../ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 const HomeHeader = () => {
   const [sheetOpen, setSheetOpen] = useState(false);
@@ -26,42 +26,27 @@ const HomeHeader = () => {
       <div className="hidden lg:flex items-center gap-4">
         <ul className="text-sm font-medium flex gap-4">
           <li>
-            <Link
-              className={`${buttonVariants({ variant: "ghost" })}`}
-              href="#home"
-            >
+            <Link className={`${buttonVariants({ variant: "ghost" })}`} href="#home">
               Home
             </Link>
           </li>
           <li>
-            <Link
-              className={`${buttonVariants({ variant: "ghost" })}`}
-              href="#work"
-            >
+            <Link className={`${buttonVariants({ variant: "ghost" })}`} href="#work">
               Work
             </Link>
           </li>
           <li>
-            <Link
-              className={`${buttonVariants({ variant: "ghost" })}`}
-              href="#skills"
-            >
+            <Link className={`${buttonVariants({ variant: "ghost" })}`} href="#skills">
               Skills
             </Link>
           </li>
           <li>
-            <Link
-              className={`${buttonVariants({ variant: "ghost" })}`}
-              href="#experience"
-            >
+            <Link className={`${buttonVariants({ variant: "ghost" })}`} href="#experience">
               Experience
             </Link>
           </li>
           <li>
-            <Link
-              className={`${buttonVariants({ variant: "ghost" })}`}
-              href="https://blog.visheshdubey.com"
-            >
+            <Link className={`${buttonVariants({ variant: "ghost" })}`} href="https://blog.visheshdubey.com">
               Blogs
             </Link>
           </li>
@@ -83,48 +68,33 @@ const HomeHeader = () => {
             <div className="flex h-full py-4 flex-1 flex-col justify-between">
               <ul className="text-sm items-start font-medium flex flex-col gap-8">
                 <li>
-                  <Link
-                    onClick={() => setTimeout(() => setSheetOpen(false), 500)}
-                    href="#home"
-                  >
+                  <Link onClick={() => setTimeout(() => setSheetOpen(false), 500)} href="#home">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    onClick={() => setTimeout(() => setSheetOpen(false), 500)}
-                    href="#work"
-                  >
+                  <Link onClick={() => setTimeout(() => setSheetOpen(false), 500)} href="#work">
                     Work
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    onClick={() => setTimeout(() => setSheetOpen(false), 500)}
-                    href="#skills"
-                  >
+                  <Link onClick={() => setTimeout(() => setSheetOpen(false), 500)} href="#skills">
                     Skills
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    onClick={() => setTimeout(() => setSheetOpen(false), 500)}
-                    href="#experience"
-                  >
+                  <Link onClick={() => setTimeout(() => setSheetOpen(false), 500)} href="#experience">
                     Experience
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    onClick={() => setSheetOpen(false)}
-                    href="https://blog.visheshdubey.com"
-                  >
+                  <Link onClick={() => setSheetOpen(false)} href="https://blog.visheshdubey.com">
                     Blogs
                   </Link>
                 </li>
               </ul>
-              <Separator className="w-full"></Separator>
-              <ThemeToggle></ThemeToggle>
+              <Separator className="w-full" />
+              <ThemeToggle />
             </div>
           </SheetContent>
         </Sheet>
