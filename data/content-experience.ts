@@ -16,10 +16,11 @@ export const experienceData: Experience[] = [
     role: "Software Engineer",
     company: "PrashantAdvait Foundation",
     period: "May 2024 - present",
-    description: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.`,
+    description: `PAF provides teachings on Vedanta, veganism & spirituality. As a SvelteKit developer at PrashantAdvait, I successfully integrated GPT Assistant API to enhance user interaction for millions of users through chatbots. I have worked on web-performance, Core web-vitals and developing new features and maintaining previous ones for LMS and Admin dashboard.
+`,
     avatar: {
-      src: "https://avatars.githubusercontent.com/u/19987590?v=4",
-      fallback: "VD.",
+      src: "/images/experience/advait-logo.png",
+      fallback: "PA",
     },
   },
   {
@@ -27,10 +28,10 @@ export const experienceData: Experience[] = [
     role: "Software Engineer",
     company: "Accenture",
     period: "Feb 2022 - May 2024",
-    description: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.`,
+    description: `Worked on developing several high-performance Azure function apps to handle millions of requests per month for a major client. Optimized the function app's performance by implementing caching, batching, and parallel processing techniques. I played a pivotal role in developing utility first ASP web pages.`,
     avatar: {
-      src: "https://avatars.githubusercontent.com/u/19987590?v=4",
-      fallback: "VD.",
+      src: "/images/experience/accenture-logo.png",
+      fallback: "AC",
     },
   },
   {
@@ -38,10 +39,10 @@ export const experienceData: Experience[] = [
     role: "FullStack Engineer",
     company: "Campusmonk",
     period: "June 2021 - Feb 2022",
-    description: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.`,
+    description: `Campusmonk is a eductaion technology platform which helps students to crack placement exams. I developed highly conversion friendly landing pages and Coding mocktests from scratch.`,
     avatar: {
-      src: "https://avatars.githubusercontent.com/u/19987590?v=4",
-      fallback: "VD.",
+      src: "/images/experience/cm-logo.png",
+      fallback: "CM",
     },
   },
 ];

@@ -24,7 +24,7 @@ export const profileData: ProfileData = {
   },
   name: "visheshdubey.",
   title: "Full-Stack Engineer",
-  description: `👋 I'm a passionate full-stack developer on a mission to craft exceptional web experiences. From front-end finesse to back-end wizardry, I love transforming ideas into captivating digital realities. Collaborating with clients and teams is the heartbeat of my process, driving success in every project. Let's connect and explore opportunities to create something extraordinary together!`,
+  description: `👋 I am a skilled full-stack developer dedicated to creating exceptional web experiences. With expertise in both front-end and back-end technologies, I transform ideas into robust applications. I value collaboration with clients and teams, believing it drives project success. Let’s connect to explore opportunities for crafting innovative digital solutions together.`,
   socialLinks: [
     { href: "http://#", icon: Github, className: "w-5 stroke-muted-foreground" },
     { href: "http://#", icon: Linkedin, className: "w-5 stroke-muted-foreground" },
