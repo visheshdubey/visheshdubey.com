@@ -11,7 +11,7 @@ const HeroSection = ({ profileData }: Props) => {
   return (
     <section className="flex w-full justify-center flex-col gap-8 pt-4 md:pt-28">
       <div className="flex gap-8 flex-wrap">
-        <Avatar className={profileData.avatar.className}>
+        <Avatar className={"z-10 w-32 aspect-square h-fit"}>
           <AvatarImage
             className="dark:grayscale transition-all ease-in-out duration-500"
             src={profileData.avatar.src}
