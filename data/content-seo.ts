@@ -1,4 +1,6 @@
-export const seoMeta = {
+import { Metadata } from "next";
+
+export const seoMeta: Metadata = {
   title: "Vishesh Dubey | FullStack Developer",
   keywords: [
     "Full-Stack Development",
