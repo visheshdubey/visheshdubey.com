@@ -20,7 +20,7 @@ const HeroSection = ({ profileData }: Props) => {
         </Avatar>
 
         <div className="flex flex-col gap-2 justify-center">
-          <span className="text-muted-foreground">Work in progress</span>
+          <span className="text-muted-foreground bg-red-500 text-white p-1 rounded shadow">(Work in progress)</span>
           <span className="text-3xl font-medium">{profileData.name}</span>
           <span className="text-muted-foreground">{profileData.title}</span>
         </div>
