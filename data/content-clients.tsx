@@ -18,16 +18,6 @@ export const workData = {
   title: "WORK",
   works: [
     {
-      id: 1,
-      title: "Campusmonk",
-      cover_image: "/images/work/cm-isometric.jpg",
-      description: "An e-Learning platform, helping students to upskill and earn their dream jobs.",
-      footerText: "campusmonk.in",
-      url: "https://campusmonk.in",
-      tw_color: "orange",
-      tw_color_weight: "500",
-    },
-    {
       id: 2,
       title: "TRNR Fitness",
       cover_image: "/images/work/trnr-work-isometric.jpg",
@@ -48,6 +38,16 @@ export const workData = {
       url: "https://topimageservices.com",
       tw_color: "neutral",
       tw_color_weight: "900",
+    },
+    {
+      id: 1,
+      title: "Campusmonk",
+      cover_image: "/images/work/cm-isometric.jpg",
+      description: "An e-Learning platform, helping students to upskill and earn their dream jobs.",
+      footerText: "campusmonk.in",
+      url: "https://campusmonk.in",
+      tw_color: "orange",
+      tw_color_weight: "500",
     },
   ],
 };
