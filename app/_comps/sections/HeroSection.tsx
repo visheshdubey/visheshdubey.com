@@ -1,7 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { buttonVariants } from "@/components/ui/button";
+
 import { ProfileData } from "@/data/content-about";
-import React from "react";
+import { buttonVariants } from "@/components/ui/button";
 
 type Props = {
   profileData: ProfileData;
@@ -20,6 +20,7 @@ const HeroSection = ({ profileData }: Props) => {
         </Avatar>
 
         <div className="flex flex-col gap-2 justify-center">
+          <span className="text-muted-foreground">Work in progress</span>
           <span className="text-3xl font-medium">{profileData.name}</span>
           <span className="text-muted-foreground">{profileData.title}</span>
         </div>
