@@ -1,7 +1,10 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+
 import CyclingWords from "./CyclingWords";
+import Link from "next/link";
 import { ProfileData } from "@/data/content-about";
 import { cn } from "@/lib/utils";
+import { socialLinks } from "@/data/content-social-links";
 
 type Props = {
   profileData: ProfileData;
@@ -23,9 +26,9 @@ const HeroSection = ({ profileData, className }: Props) => {
           {profileData.description}
         </span>
       </div>
-      <Button size={"lg"} className="w-fit">
+      <Link href={socialLinks.email} className={cn(buttonVariants({ variant: "default", size: "lg" }), "w-fit")}>
         Say Hello
-      </Button>
+      </Link>
     </section>
   );
 };

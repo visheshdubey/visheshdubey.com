@@ -1,6 +1,7 @@
-import { buttonVariants } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
-import React from "react";
+
+import { buttonVariants } from "@/components/ui/button";
+import { socialLinks } from "@/data/content-social-links";
 
 type Props = {};
 
@@ -8,10 +9,10 @@ const Footer = (props: Props) => {
   return (
     <footer className="max-w-7xl w-full mx-auto flex flex-wrap p-8 justify-center md:justify-between gap-8 items-center ">
       <div className="flex gap-8 justify-center md:justify-between items-center flex-wrap">
-        <span className="flex gap-2 items-center text-sm">© visheshdubey, 2023</span>
+        <span className="flex gap-2 items-center text-sm">© visheshdubey, 2024</span>
         <div className="flex gap-4">
           <a
-            href="http://#"
+            href={socialLinks.github}
             className={buttonVariants({
               variant: "ghost",
               size: "icon",
@@ -20,7 +21,7 @@ const Footer = (props: Props) => {
             <Github className={` w-5 stroke-muted-foreground`} />
           </a>
           <a
-            href="http://#"
+            href={socialLinks.linkedin}
             className={buttonVariants({
               variant: "ghost",
               size: "icon",
@@ -29,7 +30,7 @@ const Footer = (props: Props) => {
             <Linkedin className="w-5 stroke-muted-foreground" />
           </a>
           <a
-            href="http://#"
+            href={socialLinks.twitter}
             className={buttonVariants({
               variant: "ghost",
               size: "icon",
@@ -38,7 +39,7 @@ const Footer = (props: Props) => {
             <Twitter className="w-5 stroke-muted-foreground" />
           </a>
           <a
-            href="http://#"
+            href={socialLinks.email}
             className={buttonVariants({
               variant: "ghost",
               size: "icon",
@@ -48,7 +49,7 @@ const Footer = (props: Props) => {
           </a>
         </div>
       </div>
-      <span className="text-muted-foreground">Iterate.Innovate.Inspire!</span>
+      <span className="text-muted-foreground">Innovate.Iterate.Inspire!</span>
     </footer>
   );
 };

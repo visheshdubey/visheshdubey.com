@@ -1,6 +1,8 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import { Work } from "@/data/content-clients";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const WorkCards = ({ className, workData }: { className?: string; workData: Work }) => {
   return (
@@ -22,39 +24,37 @@ const WorkCards = ({ className, workData }: { className?: string; workData: Work
         <p className="text-neutral-500">{workData.description}</p>
 
         <div className="flex flex-wrap gap-2">
-          <div className="flex items-center justify-center rounded-full backdrop-blur-xl bg-gradient-to-r from-purple-500/20 to-blue-500/20 px-2 py-1">
-            <p className="text-sm text-primary/90">Client Project</p>
-          </div>
-          <div className="rounded-full border border-secondary px-2 py-1">
-            <p className="text-sm text-primary/90">React</p>
-          </div>
-          <div className="rounded-full border border-secondary px-2 py-1">
-            <p className="text-sm text-primary/90">Next.js</p>
-          </div>
-          <div className="rounded-full border border-secondary px-2 py-1">
-            <p className="text-sm text-primary/90">Tailwind CSS</p>
-          </div>
-          <div className="rounded-full border border-secondary px-2 py-1">
-            <p className="text-sm text-primary/90">TypeScript</p>
-          </div>
-          <div className="rounded-full border border-secondary px-2 py-1">
-            <p className="text-sm text-primary/90">Node.js</p>
-          </div>
-          <div className="rounded-full border border-secondary px-2 py-1">
-            <p className="text-sm text-primary/90">Express</p>
-          </div>
-          <div className="rounded-full border border-secondary px-2 py-1">
-            <p className="text-sm text-primary/90">MongoDB</p>
-          </div>
+          {workData.isClient && (
+            <div className="flex items-center justify-center rounded-full backdrop-blur-xl bg-gradient-to-r from-purple-500/20 to-blue-500/20 px-2 py-1">
+              <p className="text-sm text-primary/90">Client Project</p>
+            </div>
+          )}
+          {workData.techStack.map((tech, index) => (
+            <div key={`techstack-${index}`} className="rounded-full border border-secondary px-2 py-1">
+              <p className="text-sm text-primary/90">{tech}</p>
+            </div>
+          ))}
         </div>
 
         <div className="flex items-center gap-2 mt-5">
-          <Button size={"sm"} className="w-fit h-7 rounded-full">
-            Live Link
-          </Button>
-          <Button size={"sm"} className="w-fit h-7 rounded-full">
-            Github
-          </Button>
+          {workData.url && (
+            <Link
+              href={workData.url}
+              target="_blank"
+              className={cn(buttonVariants({ variant: "default", size: "sm" }), "w-fit h-7 rounded-full")}
+            >
+              Live Link
+            </Link>
+          )}
+          {workData.githubUrl && (
+            <Link
+              href={workData.githubUrl}
+              target="_blank"
+              className={cn(buttonVariants({ variant: "secondary", size: "sm" }), "w-fit h-7 rounded-full")}
+            >
+              Github
+            </Link>
+          )}
         </div>
       </div>
     </div>
