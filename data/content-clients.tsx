@@ -15,8 +15,19 @@ export type Work = {
 };
 
 export const workData = {
-  title: "WORK",
+  title: "PROJECTS",
   works: [
+    {
+      id: 1,
+      title: "Polka fi ",
+      cover_image: "/images/work/trnr-work-isometric.jpg",
+      description:
+        "Sydney, AU based fitness brand which designs portable fitness and recovery tools that support every step of your journey.",
+      footerText: "trnr.com",
+      url: "https://trnr.com",
+      tw_color: "purple",
+      tw_color_weight: "600",
+    },
     {
       id: 2,
       title: "TRNR Fitness",

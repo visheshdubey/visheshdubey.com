@@ -1,18 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import React from "react";
 
 type Props = {};
 
 const EmailCTASection = (props: Props) => {
   return (
-    <section className="flex w-full  justify-center items-center flex-col gap-8 md:gap-16  py-36">
-      <h3 className="text-3xl md:text-5xl text-center leading-relaxed font-medium">
-        {`Got an Idea? Let's Make Magic Happen, Together!`}
+    <section className="flex w-full  justify-center items-center flex-col gap-8 md:gap-8 py-36">
+      <h3 className="text-xl md:text-4xl text-center leading-relaxed font-medium">
+        {`Have a Project in Mind? Let's Talk About It`}
       </h3>
       <div className="flex w-full items-center flex-wrap justify-center gap-4">
-        <Input className="max-w-2xl px-8 h-16 rounded-full" type="email" placeholder="johndoe@example.com" />
-        <Button className="h-16 rounded-full w-36 text-lg ">Submit</Button>
+        <Button size={"lg"} className="w-fit">
+          Say Hello
+        </Button>
       </div>
     </section>
   );
