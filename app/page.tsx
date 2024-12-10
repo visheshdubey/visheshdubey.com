@@ -1,26 +1,28 @@
-import ShootingStarContainer from "./_comps/ui/ShootingStarContainer";
-import HeroSection from "./_comps/sections/HeroSection";
-import { profileData } from "@/data/content-about";
-import WorkSection from "./_comps/sections/WorkSection";
-import { workData } from "@/data/content-clients";
-import SkillSection from "./_comps/sections/SkillSection";
-import ExperienceSection from "./_comps/sections/ExperienceSection";
-import { experienceData } from "@/data/content-experience";
-import EmailCTASection from "./_comps/sections/EmailCTASection";
-import { skillData } from "@/data/content-skills";
 import AnimateDiv from "./_comps/animation/Staggered";
+import EmailCTASection from "./_comps/sections/EmailCTASection";
+import ExperienceSection from "./_comps/sections/ExperienceSection";
+import HeroSection from "./_comps/sections/HeroSection";
+import { ShootingStars } from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/star-background";
+import WorkSection from "./_comps/sections/WorkSection";
+import { experienceData } from "@/data/content-experience";
+import { profileData } from "@/data/content-about";
+import { workData } from "@/data/content-clients";
 
 export default function Home() {
   return (
-    <main className="flex relative min-h-screen h-fit max-w-5xl mx-auto flex-col items-center gap-8 p-8" id="home">
-      <ShootingStarContainer />
-      <AnimateDiv>
-        <HeroSection profileData={profileData} />
-      </AnimateDiv>
-      <WorkSection workData={workData} />
-      <SkillSection skills={skillData} />
-      <ExperienceSection experiences={experienceData} />
-      <EmailCTASection />
+    <main className="relative" id="home">
+      <div className="flex z-20 relative max-w-5xl mx-auto flex-col items-center gap-24 lg:gap-36 px-4 lg:px-8">
+        <AnimateDiv>
+          <HeroSection profileData={profileData} className="mt-16" />
+        </AnimateDiv>
+        <WorkSection workData={workData} />
+        {/* <SkillSection skills={skillData} /> */}
+        <ExperienceSection experiences={experienceData} />
+        <EmailCTASection />
+      </div>
+      <ShootingStars className="z-10" />
+      <StarsBackground className="z-10" />
     </main>
   );
 }

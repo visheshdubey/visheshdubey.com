@@ -1,31 +1,63 @@
-import React from "react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { ExternalLink } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { Work } from "@/data/content-clients";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const WorkCards = ({ className, workData }: { className?: string; workData: Work }) => {
   return (
-    <Card className={`shadow-none overflow-hidden  ${className}`}>
-      <CardContent
-        className={`bg-${workData.tw_color}-${workData.tw_color_weight} flex flex-col relative h-48 p-0 justify-end`}
-      >
-        <Image
-          src={workData.cover_image || ""}
-          className="absolute flex grow inset-0 z-10 scale-110 hover:scale-105 ease-in-out duration-300 object-fill"
-          alt=""
-          width={720}
-          height={720}
-        ></Image>
-      </CardContent>
-      <CardFooter className="p-4 flex flex-col items-start gap-1.5 bg-none backdrop-blur-2xl">
-        <a href={workData.url} className="flex gap-2 w-fit hover:gap-3 transition-all ease-in-out">
-          {workData.footerText}
-          <ExternalLink className="w-4" />
+    <div className={`rounded-xl lg:rounded-2xl shadow-none overflow-hidden ${className}`}>
+      <Image
+        src={workData.cover_image || ""}
+        className="flex grow aspect-video inset-0 z-10 object-cover scale-100 hover:scale-125 ease-in-out duration-300"
+        alt=""
+        width={720}
+        height={720}
+      />
+      <div className="p-4 lg:p-6 flex flex-col gap-4 items-start bg-none backdrop-blur-2xl">
+        <a
+          href={workData.url}
+          className="flex font-poppins font-medium gap-2 text-xl w-fit hover:gap-3 transition-all ease-in-out"
+        >
+          {workData.title}
         </a>
-        <p className="text-sm text-gray-600">{workData.description}</p>
-      </CardFooter>
-    </Card>
+        <p className="text-neutral-500">{workData.description}</p>
+
+        <div className="flex flex-wrap gap-2">
+          {workData.isClient && (
+            <div className="flex items-center justify-center rounded-full backdrop-blur-xl bg-gradient-to-r from-purple-500/20 to-blue-500/20 px-2 py-1">
+              <p className="text-sm text-primary/90">Client Project</p>
+            </div>
+          )}
+          {workData.techStack.map((tech, index) => (
+            <div key={`techstack-${index}`} className="rounded-full border border-secondary px-2 py-1">
+              <p className="text-sm text-primary/90">{tech}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-2 mt-5">
+          {workData.url && (
+            <Link
+              href={workData.url}
+              target="_blank"
+              className={cn(buttonVariants({ variant: "default", size: "sm" }), "w-fit h-7 rounded-full")}
+            >
+              Live Link
+            </Link>
+          )}
+          {workData.githubUrl && (
+            <Link
+              href={workData.githubUrl}
+              target="_blank"
+              className={cn(buttonVariants({ variant: "secondary", size: "sm" }), "w-fit h-7 rounded-full")}
+            >
+              Github
+            </Link>
+          )}
+        </div>
+      </div>
+    </div>
   );
 };
 

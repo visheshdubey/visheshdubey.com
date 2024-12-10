@@ -1,19 +1,13 @@
 "use client";
-import React, { useState } from "react";
-import { ThemeToggle } from "@/components/theme/theme-toggle";
-import { Separator } from "@/components/ui/separator";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+
 import Link from "next/link";
+import { Menu } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { buttonVariants } from "@/components/ui/button";
+import { useState } from "react";
 
 const HomeHeader = () => {
   const [sheetOpen, setSheetOpen] = useState(false);
@@ -35,21 +29,21 @@ const HomeHeader = () => {
               Work
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link className={`${buttonVariants({ variant: "ghost" })}`} href="#skills">
               Skills
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link className={`${buttonVariants({ variant: "ghost" })}`} href="#experience">
               Experience
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link className={`${buttonVariants({ variant: "ghost" })}`} href="https://blog.visheshdubey.com">
               Blogs
             </Link>
-          </li>
+          </li> */}
         </ul>
         <div className="h-5 w-[1px] bg-muted-foreground/80 ml-2"></div>
         <ThemeToggle></ThemeToggle>
@@ -77,21 +71,21 @@ const HomeHeader = () => {
                     Work
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link onClick={() => setTimeout(() => setSheetOpen(false), 500)} href="#skills">
                     Skills
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link onClick={() => setTimeout(() => setSheetOpen(false), 500)} href="#experience">
                     Experience
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link onClick={() => setSheetOpen(false)} href="https://blog.visheshdubey.com">
                     Blogs
                   </Link>
-                </li>
+                </li> */}
               </ul>
               <Separator className="w-full" />
               <ThemeToggle />

@@ -12,11 +12,28 @@ export type Work = {
   url: string;
   tw_color: string;
   tw_color_weight: string;
+  githubUrl?: string;
+  isClient: boolean;
+  techStack: string[];
 };
 
 export const workData = {
-  title: "WORK",
+  title: "PROJECTS",
   works: [
+    {
+      id: 1,
+      title: "Polka fi ",
+      cover_image: "/images/work/polka-fi.jpg",
+      description:
+        "A personal project — Transform your voice into organized finances, Simply speak your transactions and let AI handle the bookkeeping details.",
+      footerText: "polkafi-app",
+      url: "https://polkafi-app.vercel.app/",
+      githubUrl: "https://github.com/visheshdubey/polkafi.app",
+      tw_color: "purple",
+      tw_color_weight: "600",
+      isClient: false,
+      techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion", "OpenAI"],
+    },
     {
       id: 2,
       title: "TRNR Fitness",
@@ -27,6 +44,8 @@ export const workData = {
       url: "https://trnr.com",
       tw_color: "purple",
       tw_color_weight: "600",
+      isClient: true,
+      techStack: ["Strapi", "React Native", "Tailwind CSS", "TypeScript", "Shopify", "OpenAI", "Docker", "Nginx"],
     },
     {
       id: 3,
@@ -38,6 +57,8 @@ export const workData = {
       url: "https://topimageservices.com",
       tw_color: "neutral",
       tw_color_weight: "900",
+      isClient: true,
+      techStack: ["CircleCI", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion", "Docker"],
     },
     {
       id: 1,
@@ -48,6 +69,8 @@ export const workData = {
       url: "https://campusmonk.in",
       tw_color: "orange",
       tw_color_weight: "500",
+      isClient: true,
+      techStack: ["CircleCI", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion", "Docker", "Nginx"],
     },
   ],
 };
