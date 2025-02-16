@@ -24,7 +24,7 @@ export const profileData: ProfileData = {
   },
   name: "visheshdubey.",
   title: "Full-Stack Engineer",
-  description: `👋 I’m a web developer, a freelancer specializing in building modern, scalable web applications. I work with React, Next.js, SvelteKit, and backend frameworks like Hono.js and Express.js.`,
+  description: `👋 I’m a full-stack developer, a freelancer specializing in building modern, scalable web applications. I work with React, Next.js, SvelteKit, and backend frameworks like Hono.js and Express.js.`,
   socialLinks: [
     { href: "http://#", icon: Github, className: "w-5 stroke-muted-foreground" },
     { href: "http://#", icon: Linkedin, className: "w-5 stroke-muted-foreground" },
