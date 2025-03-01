@@ -1,10 +1,10 @@
-import AnimateDiv from "./_comps/animation/Staggered";
-import EmailCTASection from "./_comps/sections/EmailCTASection";
-import ExperienceSection from "./_comps/sections/ExperienceSection";
-import HeroSection from "./_comps/sections/HeroSection";
+import AnimateDiv from "../_comps/animation/Staggered";
+import EmailCTASection from "../_comps/sections/EmailCTASection";
+import ExperienceSection from "../_comps/sections/ExperienceSection";
+import HeroSection from "../_comps/sections/HeroSection";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/star-background";
-import WorkSection from "./_comps/sections/WorkSection";
+import WorkSection from "../_comps/sections/WorkSection";
 import { experienceData } from "@/data/content-experience";
 import { profileData } from "@/data/content-about";
 import { workData } from "@/data/content-clients";

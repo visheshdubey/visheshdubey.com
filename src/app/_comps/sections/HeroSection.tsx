@@ -1,8 +1,7 @@
-import { buttonVariants } from "@/components/ui/button";
-
 import CyclingWords from "./CyclingWords";
 import Link from "next/link";
 import { ProfileData } from "@/data/content-about";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { socialLinks } from "@/data/content-social-links";
 

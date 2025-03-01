@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { SkillCategory as SkillCategoryType } from "@/data/content-skills";
-import React from "react";
 import { HoverCardDemo } from "./SkillHoverCard";
+import { SkillCategory as SkillCategoryType } from "@/data/content-skills";
 
 type Props = {
   category: SkillCategoryType;

@@ -1,4 +1,3 @@
-import React from "react";
 import SkillCategory from "../ui/SkillCategory";
 import { Skills } from "@/data/content-skills";
 
