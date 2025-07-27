@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-// import Header from "@/components/header";
+import Header from "@/app/_comps/Header";
 // import Footer from "@/components/footer";
 
 const geistSans = Geist({
@@ -44,7 +44,7 @@ export default function RootLayout({
                 <ThemeProvider enableSystem={true} attribute="class" storageKey="theme" defaultTheme="system">
                     <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
                         <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
-                            {/* <Header /> */}
+                            <Header />
                             {children}
                             {/* <Footer /> */}
                         </div>
