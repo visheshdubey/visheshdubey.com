@@ -16,7 +16,7 @@ const HomePage = (props: Props) => {
                             <h1 className="text-2xl md:text-4xl font-bold font-bricolage">
                                 Hi, I'm {` `}
                                 <br className="block md:hidden" />
-                                <TextLoop interval={1} transition={{ duration: 0.3 }}>
+                                <TextLoop interval={1} transition={{ duration: 0.15 }}>
                                     <span>Vishesh Dubey 👋</span>
                                     <span className="text-neutral-500">Full Stack Developer</span>
                                     <span className="text-neutral-500">Builder</span>
