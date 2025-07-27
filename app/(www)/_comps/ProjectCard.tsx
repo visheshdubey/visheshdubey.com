@@ -1,0 +1,38 @@
+"use client";
+import { motion } from "motion/react";
+import React from "react";
+
+interface ProjectCardProps {
+    title: string;
+    description: string;
+    imageUrl?: string;
+    className?: string;
+    delay?: number;
+}
+
+const ProjectCard = ({ title, description, imageUrl, className = "", delay = 0 }: ProjectCardProps) => {
+    return (
+        <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{
+                duration: 0.5,
+                delay,
+                ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+        >
+            <div className={`p-4 rounded-md -ml-4 space-y-1 flex flex-col gap-4 ${className}`}>
+                <div className="w-full aspect-video rounded-md bg-neutral-100">
+                    {imageUrl && <img src={imageUrl} alt={title} className="w-full h-full object-cover rounded-md" />}
+                </div>
+                <div className="flex flex-col gap-1">
+                    <h3 className="text-base font-semibold font-inter">{title}</h3>
+                    <p className="text-sm font-inter leading-relaxed tracking-wide">{description}</p>
+                </div>
+            </div>
+        </motion.div>
+    );
+};
+
+export default ProjectCard;
