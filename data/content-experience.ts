@@ -9,8 +9,8 @@ export interface Experience {
     avatar: {
       src: string;
       fallback: string;
-    }
-  }[]
+    };
+  }[];
 }
 
 export const experienceData: Experience = {
@@ -19,8 +19,20 @@ export const experienceData: Experience = {
     {
       id: 0,
       role: "Software Engineer",
+      company: "LendAPI Inc.",
+      period: "April 2025 - present",
+      description: `LendAPI is a fintech infrastructure platform that provides a suite of APIs enabling businesses to build, launch, and manage digital lending products. It abstracts the complexity of loan lifecycle management—covering borrower onboarding, KYC, credit assessment, loan disbursal, repayment tracking, and collections—into programmable interfaces. By integrating with banking systems, credit bureaus, and payment gateways, LendAPI allows companies such as NBFCs, fintech startups, and embedded finance providers to deploy scalable, compliant lending solutions without building core systems from scratch.
+`,
+      avatar: {
+        src: "/images/experience/lendapi-logo.png",
+        fallback: "LA",
+      },
+    },
+    {
+      id: 1,
+      role: "Software Engineer",
       company: "PrashantAdvait Foundation",
-      period: "May 2024 - present",
+      period: "May 2024 - April 2025",
       description: `PAF provides teachings on Vedanta, veganism & spirituality. As a SvelteKit developer at PrashantAdvait, I successfully integrated GPT Assistant API to enhance user interaction for millions of users through chatbots. I have worked on web-performance, Core web-vitals and developing new features and maintaining previous ones for LMS and Admin dashboard.
 `,
       avatar: {
@@ -29,7 +41,7 @@ export const experienceData: Experience = {
       },
     },
     {
-      id: 1,
+      id: 2,
       role: "Software Engineer",
       company: "Accenture",
       period: "Feb 2022 - May 2024",
@@ -40,7 +52,7 @@ export const experienceData: Experience = {
       },
     },
     {
-      id: 2,
+      id: 3,
       role: "FullStack Engineer",
       company: "Campusmonk",
       period: "June 2021 - Feb 2022 (Part-time)",
@@ -50,5 +62,5 @@ export const experienceData: Experience = {
         fallback: "CM",
       },
     },
-  ]
-}
+  ],
+};
