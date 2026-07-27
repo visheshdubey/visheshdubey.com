@@ -5,7 +5,7 @@ import { socialLinks } from "@/data/content-social-links";
 export default function ContactSection() {
   return (
     <section id="contact" className="mx-auto w-full max-w-6xl px-6 pb-32 lg:px-8 md:pb-44">
-      <SectionHeading index="05" title="Contact" />
+      <SectionHeading index="06" title="Contact" />
 
       <Reveal>
         <div className="mt-16 md:mt-24">

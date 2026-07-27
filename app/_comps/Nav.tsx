@@ -6,8 +6,9 @@ import { socialLinks } from "@/data/content-social-links";
 
 const NAV_LINKS = [
   { href: "/#work", label: "Work" },
-  { href: "/#approach", label: "Approach" },
+  { href: "/#experience", label: "Experience" },
   { href: "/blog", label: "Writing" },
+  { href: "/#skills", label: "Skills" },
 ];
 
 export default function Nav() {
