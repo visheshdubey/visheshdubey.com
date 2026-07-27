@@ -23,8 +23,8 @@ export const profileData: ProfileData = {
     className: "z-10 w-32 aspect-square h-fit",
   },
   name: "visheshdubey.",
-  title: "Full-Stack Engineer",
-  description: `👋 I’m a full-stack developer, a freelancer specializing in building modern, scalable web applications. I work with React, Next.js, SvelteKit, and backend frameworks like Hono.js and Express.js.`,
+  title: "Product Developer",
+  description: `I build web products with React, Next.js, SvelteKit, and backends like Hono and Express. I use AI-assisted coding when it saves real time.`,
   socialLinks: [
     { href: "http://#", icon: Github, className: "w-5 stroke-muted-foreground" },
     { href: "http://#", icon: Linkedin, className: "w-5 stroke-muted-foreground" },

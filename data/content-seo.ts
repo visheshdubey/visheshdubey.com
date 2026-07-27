@@ -1,9 +1,11 @@
 import { Metadata } from "next";
 
 export const seoMeta: Metadata = {
-  title: "Vishesh Dubey | FullStack Developer",
+  title: "Vishesh Dubey | Fullstack Product Engineer",
   keywords: [
-    "Full-Stack Development",
+    "AI-assisted coding",
+    "Cursor",
+    "Product Development",
     "Node.js",
     "React.js",
     "Svelte",
@@ -35,5 +37,5 @@ export const seoMeta: Metadata = {
     "API Security",
   ],
   description:
-    "I am a skilled full-stack developer dedicated to creating exceptional web experiences. With expertise in both front-end and back-end technologies, I transform ideas into robust applications. I value collaboration with clients and teams, believing it drives project success. Let’s connect to explore opportunities for crafting innovative digital solutions together.",
+    "Fullstack engineer who ships products end to end. Led a live fintech frontend replatform at LendAPI, built India's largest online Gita exam for 7,000+ students, and ran file infrastructure at 1M+ daily users.",
 };

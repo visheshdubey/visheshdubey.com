@@ -25,7 +25,7 @@ export const workData = {
       title: "Polka fi ",
       cover_image: "/images/work/polka-fi.jpg",
       description:
-        "A personal project — Transform your voice into organized finances, Simply speak your transactions and let AI handle the bookkeeping details.",
+        "Side project. Talk your expenses out loud and let AI sort them into categories. Less spreadsheet, more speaking.",
       footerText: "polkafi-app",
       url: "https://polkafi-app.vercel.app/",
       githubUrl: "https://github.com/visheshdubey/polkafi.app",
@@ -39,7 +39,7 @@ export const workData = {
       title: "TRNR Fitness",
       cover_image: "/images/work/trnr-work-isometric.jpg",
       description:
-        "Sydney, AU based fitness brand which designs portable fitness and recovery tools that support every step of your journey.",
+        "Sydney fitness brand making portable training and recovery gear. I helped on the app and backend stack.",
       footerText: "trnr.com",
       url: "https://trnr.com",
       tw_color: "purple",
@@ -52,7 +52,7 @@ export const workData = {
       title: "TOP IMAGE",
       cover_image: "/images/work/tis-isometric.jpg",
       description:
-        "A boutique post-production studio rooted in the art of subtle, elevated retouching and white-glove client services.",
+        "Post-production studio in NYC. Quiet retouching, careful client service. I built their marketing site and deployment pipeline.",
       footerText: "topimageservices.com",
       url: "https://topimageservices.com",
       tw_color: "neutral",
@@ -64,7 +64,7 @@ export const workData = {
       id: 1,
       title: "Campusmonk",
       cover_image: "/images/work/cm-isometric.jpg",
-      description: "An e-Learning platform, helping students to upskill and earn their dream jobs.",
+      description: "Ed-tech platform for placement prep. Mock tests, courses, the works.",
       footerText: "campusmonk.in",
       url: "https://campusmonk.in",
       tw_color: "orange",

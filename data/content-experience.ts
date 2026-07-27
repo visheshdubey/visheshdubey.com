@@ -21,8 +21,7 @@ export const experienceData: Experience = {
       role: "Software Engineer",
       company: "LendAPI Inc.",
       period: "April 2025 - present",
-      description: `LendAPI is a fintech infrastructure platform that provides a suite of APIs enabling businesses to build, launch, and manage digital lending products. It abstracts the complexity of loan lifecycle management—covering borrower onboarding, KYC, credit assessment, loan disbursal, repayment tracking, and collections—into programmable interfaces. By integrating with banking systems, credit bureaus, and payment gateways, LendAPI allows companies such as NBFCs, fintech startups, and embedded finance providers to deploy scalable, compliant lending solutions without building core systems from scratch.
-`,
+      description: `LendAPI sells APIs that let companies launch and run digital lending products without building the whole stack themselves. Onboarding, KYC, disbursal, repayments, collections. I work on the frontend replatform from Django templates to React.`,
       avatar: {
         src: "/images/experience/lendapi-logo.png",
         fallback: "LA",
@@ -33,8 +32,7 @@ export const experienceData: Experience = {
       role: "Software Engineer",
       company: "PrashantAdvait Foundation",
       period: "May 2024 - April 2025",
-      description: `PAF provides teachings on Vedanta, veganism & spirituality. As a SvelteKit developer at PrashantAdvait, I successfully integrated GPT Assistant API to enhance user interaction for millions of users through chatbots. I have worked on web-performance, Core web-vitals and developing new features and maintaining previous ones for LMS and Admin dashboard.
-`,
+      description: `PAF runs courses on Vedanta and related topics, with a big online presence. I built and maintained the SvelteKit frontend: LMS, admin dashboards, checkout, and a GPT-powered chatbot used by a large user base. Also spent time on Core Web Vitals and exam-day reliability.`,
       avatar: {
         src: "/images/experience/advait-logo.png",
         fallback: "PA",
@@ -45,7 +43,7 @@ export const experienceData: Experience = {
       role: "Software Engineer",
       company: "Accenture",
       period: "Feb 2022 - May 2024",
-      description: `Worked on developing several high-performance Azure function apps to handle millions of requests per month for a major client. Optimized the function app's performance by implementing caching, batching, and parallel processing techniques. I played a pivotal role in developing utility first ASP web pages.`,
+      description: `Built Azure Function Apps handling millions of requests a month for a major retail client. Added caching, batching, and parallel processing where it mattered. Also worked on utility-first ASP pages for internal tooling.`,
       avatar: {
         src: "/images/experience/accenture-logo.png",
         fallback: "AC",
@@ -56,7 +54,7 @@ export const experienceData: Experience = {
       role: "FullStack Engineer",
       company: "Campusmonk",
       period: "June 2021 - Feb 2022 (Part-time)",
-      description: `Campusmonk is a eductaion technology platform which helps students to crack placement exams. I developed highly conversion friendly landing pages and Coding mocktests from scratch.`,
+      description: `Campusmonk helps students prep for placement exams. I built landing pages and coding mock tests from scratch, part-time while finishing college.`,
       avatar: {
         src: "/images/experience/cm-logo.png",
         fallback: "CM",

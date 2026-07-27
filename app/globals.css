@@ -1,99 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
-@keyframes slide-in {
-  from {
-    /* transform: translateX(10%);
-    transform: translateY(90%); */
-    /* opacity: 1; */
-    top: 0;
-    left: 0;
-  }
-  to {
-    top: 450;
-    left: 450;
-    /* opacity: 0; */
-  }
-}
-.shooting-stars {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.34217436974789917) 59%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  transform: rotate(20deg);
-  animation: slide-in 1000ms;
-  position: absolute;
-  animation-iteration-count: infinite;
-}
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 93%;
 
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 56%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 93%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 93%;
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
 
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 0 0% 93%;
+    --primary-foreground: 0 0% 7%;
 
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 93%;
 
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --ring: 0 0% 63.9%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 93%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
 
-    --ring: 0 0% 14.9%;
+    --ring: 0 0% 30%;
+
+    --radius: 0.5rem;
+
+    /* single brand accent: deep amber */
+    --brand: 36 92% 55%;
   }
 }
 
@@ -103,5 +51,16 @@ html {
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    background: hsl(var(--brand));
+    color: hsl(0 0% 5%);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
