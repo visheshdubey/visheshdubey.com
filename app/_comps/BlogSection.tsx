@@ -10,7 +10,7 @@ export default function BlogSection() {
       <div className="flex items-baseline justify-between border-t border-border/60 pt-6">
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            <span className="text-brand">04</span>
+            <span className="text-brand">05</span>
             <span className="mx-3 text-border">·</span>
             Writing
           </p>

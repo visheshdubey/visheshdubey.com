@@ -4,8 +4,8 @@ import { skillData } from "@/data/content-skills";
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="mx-auto w-full max-w-6xl px-6 pb-32 lg:px-8 md:pb-44">
-      <SectionHeading index="07" title="Skills" />
+    <section id="skills" className="mx-auto w-full max-w-6xl px-6 py-28 lg:px-8 md:py-40">
+      <SectionHeading index="01" title="Skills" />
 
       <div className="mt-16 flex flex-col gap-14 md:mt-24">
         {skillData.categories.map((category, i) => (

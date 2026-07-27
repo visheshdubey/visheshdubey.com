@@ -7,7 +7,7 @@ import { experienceData } from "@/data/content-experience";
 export default function ExperienceSection() {
   return (
     <section id="experience" className="mx-auto w-full max-w-6xl px-6 pb-28 lg:px-8 md:pb-40">
-      <SectionHeading index="05" title="Experience" />
+      <SectionHeading index="03" title="Experience" />
 
       <div className="mt-16 flex flex-col gap-12 md:mt-24">
         {experienceData.data.map((job, i) => (

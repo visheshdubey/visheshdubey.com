@@ -21,14 +21,11 @@ const CASE_STUDIES: CaseStudy[] = [
     pull: "Django → React",
     pullNote: "full replatform, product stayed live",
     title: "Replatforming a live lending product",
-    problem:
-      "The frontend ran on Django templates. New features were slow to ship, hard to hire for, and every screen felt like a one-off.",
+    problem: "Django templates. Slow to ship, hard to hire for.",
     ownership:
-      "I wrote the migration plan and led the move to React, TypeScript, and Vite. We swapped modules one at a time while customers kept using the product.",
-    decisions:
-      "Shared components on Radix and Tailwind so every migrated screen landed on the same system. Drag-and-drop form builders, node-based workflow editors, spreadsheet grids, all wired with TanStack Query. Code splitting and lazy routes to cut bundle size.",
-    outcome:
-      "Auth, documents, notifications, and reporting are all on the new stack now. The team ships on a frontend they can actually extend.",
+      "Wrote the migration plan and led the move to React, TypeScript, and Vite. One module at a time, product stayed live.",
+    decisions: "Shared Radix/Tailwind components, TanStack Query for data, lazy routes to cut bundle size.",
+    outcome: "Auth, documents, notifications, and reporting on the new stack.",
     stack: "React · TypeScript · Vite · Radix UI · Tailwind · XYFlow · TanStack Query · Django REST",
   },
   {
@@ -37,14 +34,10 @@ const CASE_STUDIES: CaseStudy[] = [
     pull: "7,000+",
     pullNote: "students, one sitting · India Book of Records",
     title: "India's largest online Gita exam",
-    problem:
-      "Thousands of students had to register, pay, and sit a timed exam in a single go. Exam day couldn't break.",
-    ownership:
-      "I owned the SvelteKit frontend. Checkout, referral, CMS, and LMS flows, plus admin dashboards that 120+ internal staff used daily.",
-    decisions:
-      "SSR and on-page SEO that grew organic traffic about 40%. Small reusable components with Flux-style state so we could ship exam-day fixes without breaking checkout.",
-    outcome:
-      "7,000+ students in one sitting, recognized by the India Book of Records. Checkout and referral changes bumped conversion 30%.",
+    problem: "Thousands of students registering, paying, and sitting a timed exam in one go.",
+    ownership: "Owned the SvelteKit frontend: checkout, referral, CMS, LMS, and admin dashboards.",
+    decisions: "SSR and SEO (+40% organic traffic). Reusable components for exam-day fixes without breaking checkout.",
+    outcome: "7,000+ students, India Book of Records. Conversion up 30%.",
     stack: "SvelteKit · Redux · Highcharts · Tailwind",
   },
   {
@@ -53,13 +46,10 @@ const CASE_STUDIES: CaseStudy[] = [
     pull: "1M+",
     pullNote: "daily users, two years in production",
     title: "File infrastructure at retail scale",
-    problem:
-      "A Swedish retail client moving files across systems serving over a million users a day. Slow or dropped transfers meant broken operations downstream.",
-    ownership:
-      "Built the SFTP/FTP file manager (React up front, Azure Function Apps behind it) and carried on-call for the integration platform.",
-    decisions:
-      "Event-driven services on Azure WebApps. Caching, batching, and parallel processing where throughput actually mattered.",
-    outcome: "Ran at 1M+ daily users for two years. File ops became something nobody had to babysit.",
+    problem: "File transfers across systems serving 1M+ daily users.",
+    ownership: "Built the SFTP/FTP file manager (React + Azure Functions). On-call for the integration platform.",
+    decisions: "Event-driven Azure services. Caching and batching where throughput mattered.",
+    outcome: "Two years at 1M+ daily users. Stable file ops.",
     stack: "React · Azure Functions · Event-driven microservices",
   },
 ];
@@ -76,7 +66,7 @@ function CaseBlock({ label, text }: { label: string; text: string }) {
 export default function WorkSection() {
   return (
     <section id="work" className="mx-auto w-full max-w-6xl px-6 py-28 lg:px-8 md:py-40">
-      <SectionHeading index="01" title="Selected work" meta={`(${String(CASE_STUDIES.length).padStart(2, "0")})`} />
+      <SectionHeading index="02" title="Selected work" meta={`(${String(CASE_STUDIES.length).padStart(2, "0")})`} />
 
       <div className="mt-20 flex flex-col gap-28 md:mt-28 md:gap-40">
         {CASE_STUDIES.map((study, i) => (
